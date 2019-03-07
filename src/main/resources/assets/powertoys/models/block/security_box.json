@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "powertoys:blocks/box_side",
+        "up": "powertoys:blocks/box_side",
+        "north": "powertoys:blocks/security_box",
+        "south": "powertoys:blocks/security_box",
+        "east": "powertoys:blocks/security_box",
+        "west": "powertoys:blocks/security_box",
+        "particle": "powertoys:blocks/security_box"
+    }
+}

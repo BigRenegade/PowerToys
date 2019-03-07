@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "RRR",
+        "RZR",
+        "RRR"
+    ],
+    "key": {
+        "R": [{
+            "item": "minecraft:lava_bucket",
+            "data": 0
+        }],
+        "Z": [{
+            "item": "powertoys:commonring",
+            "data": 0
+        }]
+    },
+    "result": {
+        "item": "powertoys:firering",
+        "data": 0,
+        "count": 1
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "RZD",
+        "   "
+    ],
+    "key": {
+        "R": [{
+            "item": "minecraft:feather",
+            "data": 0
+        }],
+        "Z": [{
+            "item": "powertoys:commonring",
+            "data": 0
+        }],
+        "D": [{
+            "item": "minecraft:ghast_tear",
+            "data": 0
+        }]
+
+    },
+    "result": {
+        "item": "powertoys:flightring",
+        "data": 0,
+        "count": 1
+    }
+}

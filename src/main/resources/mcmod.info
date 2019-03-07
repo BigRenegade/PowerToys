@@ -1,0 +1,16 @@
+[
+{
+  "modid": "powertoys",
+  "name": "Power Toys",
+  "description": "For the simple things in life.  A few toys to make things easier",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BigRenegade"],
+  "credits": "zerofall, SBlectric",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

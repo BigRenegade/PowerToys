@@ -1,0 +1,43 @@
+# language file
+
+# creative tab
+itemGroup.PRtab=PT Storage
+itemGroup.PR_tab=PT Rings
+
+# blocks
+tile.powertoys:blank_box.name=Blank Box
+tile.powertoys:storage_core.name=Storage Core
+tile.powertoys:storage_box.name=Storage Box
+tile.powertoys:condensed_storage_box.name=Condensed Storage Box
+tile.powertoys:super_storage_box.name=Super Storage Box
+tile.powertoys:ultra_storage_box.name=Ultra Storage Box
+tile.powertoys:hyper_storage_box.name=Hyper Storage Box
+tile.powertoys:input_port.name=Input Port
+tile.powertoys:output_port.name=Ejection Port
+tile.powertoys:extract_port.name=Extraction Port
+tile.powertoys:crafting_box.name=Crafting Box
+tile.powertoys:search_box.name=Search Box
+tile.powertoys:sort_box.name=Sorting Box
+tile.powertoys:access_terminal.name=Access Terminal
+tile.powertoys:security_box.name=Security Box
+
+# items
+item.powertoys:key.name=PR Key
+item.powertoys:dolly.name=Dolly
+item.powertoys:dolly_super.name=Super Dolly
+
+
+//Items
+item.powertoys:flightring.name=Ring of Flight
+item.powertoys:firering.name=Ring of Fire Resistance
+item.powertoys:invisibleamulet.name=Amulet of Invisibility
+item.powertoys:minervest.name=Vest of Fast Mining
+item.powertoys:nightvisionglasses.name=Glasses of Night Vision
+item.powertoys:waterring.name=Ring of Water Breathing
+item.powertoys:waterwalkerring.name=Ring of Water Walker
+item.powertoys:lavawalkerring.name=Ring of Lava Walker
+item.powertoys:magnetring.name=Ring of Magnetization
+item.powertoys:commonring.name=Common Ring
+item.powertoys:basebelt.name=Utility Belt
+item.powertoys:regenring.name=Ring of Regeneration
+item.powertoys:saturationring.name=Ring of Saturation

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "powertoys:blocks/box_side_ultra",
+        "up": "powertoys:blocks/box_side_ultra",
+        "north": "powertoys:blocks/ultra_storage_box",
+        "south": "powertoys:blocks/ultra_storage_box",
+        "east": "powertoys:blocks/ultra_storage_box",
+        "west": "powertoys:blocks/ultra_storage_box",
+        "particle": "powertoys:blocks/ultra_storage_box"
+    }
+}

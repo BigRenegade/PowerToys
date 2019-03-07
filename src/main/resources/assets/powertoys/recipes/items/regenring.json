@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "A S",
+        "AZS",
+        "A S"
+    ],
+    "key": {
+        "A": [{
+            "item": "minecraft:fish",
+            "data": 0
+        }],
+        "Z": [{
+            "item": "powertoys:commonring",
+            "data": 0
+        }],
+        "S": [{
+            "item": "minecraft:wheat",
+            "data": 0
+        }]
+
+    },
+    "result": {
+        "item": "powertoys:regenring",
+        "data": 0,
+        "count": 1
+    }
+}

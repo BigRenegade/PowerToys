@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "R D",
+        "RZD",
+        "R D"
+    ],
+    "key": {
+        "R": [{
+            "item": "minecraft:wheat",
+            "data": 0
+        }],
+        "Z": [{
+            "item": "powertoys:commonring",
+            "data": 0
+        }],
+        "D": [{
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }]
+
+    },
+    "result": {
+        "item": "powertoys:saturationring",
+        "data": 0,
+        "count": 1
+    }
+}

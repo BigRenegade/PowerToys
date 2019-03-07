@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "powertoys:blocks/box_side",
+        "up": "powertoys:blocks/output_port",
+        "north": "powertoys:blocks/box_side",
+        "south": "powertoys:blocks/box_side",
+        "east": "powertoys:blocks/box_side",
+        "west": "powertoys:blocks/box_side",
+        "particle": "powertoys:blocks/box_side"
+    }
+}

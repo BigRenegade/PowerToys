@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "A B",
+        "RRR",
+        "C D"
+    ],
+    "key": {
+        "R": [{
+            "item": "minecraft:leather",
+            "data": 0
+        }],
+        "A": [{
+            "item": "powertoys:lavawalkerring",
+            "data": 0
+        }],
+        "B": [{
+            "item": "powertoys:waterwalkerring",
+            "data": 0
+        }],
+        "C": [{
+            "item": "powertoys:firering",
+            "data": 0
+        }],
+        "D": [{
+            "item": "powertoys:waterring",
+            "data": 0
+        }]
+
+    },
+    "result": {
+        "item": "powertoys:basebelt",
+        "data": 0,
+        "count": 1
+    }
+}

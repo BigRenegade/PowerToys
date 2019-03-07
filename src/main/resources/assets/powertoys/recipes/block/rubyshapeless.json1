@@ -1,0 +1,26 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "powerrings:ruby"
+    },
+
+    {
+      "item": "minecraft:apple"
+    },
+    
+    {
+      "item": "minecraft:apple"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "powerrings:ruby_block",
+        "count": 1
+    }
+}

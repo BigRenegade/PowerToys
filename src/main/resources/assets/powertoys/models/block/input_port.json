@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "powertoys:blocks/input_port",
+        "particle": "powertoys:blocks/input_port"
+    }
+}

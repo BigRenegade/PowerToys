@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "powertoys:blocks/box_side",
+        "up": "powertoys:blocks/box_side",
+        "north": "powertoys:blocks/storage_core",
+        "south": "powertoys:blocks/storage_core",
+        "east": "powertoys:blocks/storage_core",
+        "west": "powertoys:blocks/storage_core",
+        "particle": "powertoys:blocks/storage_core"
+    }
+}

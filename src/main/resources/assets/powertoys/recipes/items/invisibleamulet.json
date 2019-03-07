@@ -1,0 +1,52 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ABC",
+        "DZE",
+        "FGH"
+    ],
+    "key": {
+        "A": [{
+            "item": "minecraft:rotten_flesh",
+            "data": 0
+        }],
+        "B": [{
+            "item": "minecraft:spider_eye",
+            "data": 0
+        }],
+        "C": [{
+            "item": "minecraft:blaze_powder",
+            "data": 0
+        }],
+        "D": [{
+            "item": "minecraft:slime_ball",
+            "data": 0
+        }],
+        "E": [{
+            "item": "minecraft:ender_pearl",
+            "data": 0
+        }],
+        "F": [{
+            "item": "minecraft:magma_cream",
+            "data": 0
+        }],
+        "G": [{
+            "item": "minecraft:gunpowder",
+            "data": 0
+        }],
+        "H": [{
+            "item": "minecraft:glowstone_dust",
+            "data": 0
+        }],
+        "Z": [{
+            "item": "powertoys:commonring",
+            "data": 0
+        }]
+
+    },
+    "result": {
+        "item": "powertoys:invisibleamulet",
+        "data": 0,
+        "count": 1
+    }
+}
