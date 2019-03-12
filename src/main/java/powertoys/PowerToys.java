@@ -16,9 +16,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import powertoys.config.ModConfiguration;
-import powertoys.config.PRConfig;
-import powertoys.config.PRConfig.ConfigEventHandler;
+import powertoys.config.RecordsConfig;
+import powertoys.config.StorageConfig;
+import powertoys.config.StorageConfig.ConfigEventHandler;
 import powertoys.events.CoreEvents;
 import powertoys.events.SecurityEvents;
 import powertoys.gui.GuiHandler;
@@ -45,9 +45,9 @@ public class PowerToys {
     public static final String GUIFACTORY = Reference.GUI_FACTORY;
 	public static SimpleNetworkWrapper nw;
 	public static File config;
-//	public static File MusicConfig;
+	public static File MusicConfig;
 	
-	public static final CreativeTabs tabPowerRings = (new CreativeTabs("PR_tab") {
+	public static final CreativeTabs tabPowerRings = (new CreativeTabs("PTRingsTab") {
 
 		@Override
 		public ItemStack getTabIconItem() {
@@ -55,7 +55,7 @@ public class PowerToys {
 		}
 	});	
 
-	public static final CreativeTabs tabStorage = (new CreativeTabs("PRtab") {
+	public static final CreativeTabs tabStorage = (new CreativeTabs("PTStorageTab") {
 
 		@Override
 		public ItemStack getTabIconItem() {
@@ -63,7 +63,7 @@ public class PowerToys {
 		}
 	});	
 
-	public static final CreativeTabs tabRecords = (new CreativeTabs("RecordsTab") {
+	public static final CreativeTabs tabRecords = (new CreativeTabs("PTRecordsTab") {
 
 		@Override
 		public ItemStack getTabIconItem() {
@@ -75,11 +75,11 @@ public class PowerToys {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		RecordSoundsBase.registerSounds();
-//		proxy.preInit();
+		RecordsConfig.registerConfig(event);
+		proxy.preInit();
 		proxy.initRegistryEvents();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		nw = PRNetwork.registerNetwork();
-		ModConfiguration.registerConfig(event);
 		MinecraftForge.EVENT_BUS.register(new CoreEvents());
 		MinecraftForge.EVENT_BUS.register(new SecurityEvents());
 		MinecraftForge.EVENT_BUS.register(new ConfigEventHandler());

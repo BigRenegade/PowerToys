@@ -7,7 +7,7 @@ import java.util.UUID;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.util.JointList;
 import powertoys.util.SecurityOverrideHelper;
 
@@ -60,7 +60,7 @@ public class TileEntitySecurityBox extends TileEntityMultiblock {
 		}
 
 		// allowed due to op level 2 override
-		if (PRConfig.enableOpOverride && !p.world.isRemote && p.capabilities.isCreativeMode
+		if (StorageConfig.enableOpOverride && !p.world.isRemote && p.capabilities.isCreativeMode
 				&& SecurityOverrideHelper.isPlayerOpLv2((EntityPlayerMP) p)) {
 			op = (EntityPlayerMP) p;
 			sendOpNotification = true;

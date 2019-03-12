@@ -1,7 +1,7 @@
 package powertoys.block;
 
 import net.minecraft.block.material.Material;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.registry.IRegistryBlock;
 
 /** A super storage box */
@@ -13,7 +13,7 @@ public class BlockSuperStorage extends BlockStorage implements IRegistryBlock {
 
 	@Override
 	public int getCapacity() {
-		return PRConfig.superCapacity;
+		return StorageConfig.superCapacity;
 	}
 
 }

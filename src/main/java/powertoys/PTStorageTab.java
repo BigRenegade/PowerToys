@@ -6,10 +6,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import powertoys.init.PRBlocks;
 
-public class PRTab extends CreativeTabs {
+public class PTStorageTab extends CreativeTabs {
 
-	public PRTab() {
-		super("PowerToys");
+	public PTStorageTab() {
+		super("PowerToys Storage");
 	}
 
 	@Override

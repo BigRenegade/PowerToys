@@ -1,7 +1,7 @@
 package powertoys.block;
 
 import net.minecraft.block.material.Material;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 
 public class BlockHyperStorage extends BlockStorage {
 
@@ -11,6 +11,6 @@ public class BlockHyperStorage extends BlockStorage {
 
 	@Override
 	public int getCapacity() {
-		return PRConfig.hyperCapacity;
+		return StorageConfig.hyperCapacity;
 	}
 }

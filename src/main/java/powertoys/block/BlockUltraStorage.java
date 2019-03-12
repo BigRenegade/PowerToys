@@ -1,7 +1,7 @@
 package powertoys.block;
 
 import net.minecraft.block.material.Material;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 
 /** An ultra storage box */
 public class BlockUltraStorage extends BlockStorage {
@@ -12,7 +12,7 @@ public class BlockUltraStorage extends BlockStorage {
 
 	@Override
 	public int getCapacity() {
-		return PRConfig.ultraCapacity;
+		return StorageConfig.ultraCapacity;
 	}
 
 }

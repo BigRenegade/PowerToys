@@ -4,8 +4,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import powertoys.config.ModConfiguration;
-import powertoys.config.PRConfig;
+import powertoys.config.RecordsConfig;
+import powertoys.config.StorageConfig;
 import powertoys.registry.RegistryHelper;
 import powertoys.util.Reference;
 
@@ -17,7 +17,8 @@ public class CommonProxy {
 	  public void preInit()
 	  {
 		   //read mbe.config first
-		    //PRConfig.preInit();
+		   StorageConfig.preInit();
+		   //RecordsConfig.preInit();
 	  }
 
 	  /**

@@ -10,7 +10,7 @@ public class Reference {
 	public static final String SERVER_PROXY = "powertoys.proxy.CommonProxy";
 	
 	public static final String DEPEND = "after:baubles@1.5.2";
-	public static final String mainTitle = "Options";
+	public static final String mainTitle = " Options";
 	public static final String GUI_FACTORY = "powertoys.gui.GuiFactory";
 
     //GUI Screen Names

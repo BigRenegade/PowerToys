@@ -53,7 +53,7 @@ public class CommonRing extends PRItem implements IBauble
 
 	@Override
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
-		return EnumRarity.COMMON;
+		return EnumRarity.RARE;
 	}
 
 }

@@ -19,7 +19,7 @@ import powertoys.block.BlockStorageCore;
 import powertoys.block.BlockSuperStorage;
 import powertoys.block.BlockUltraStorage;
 import powertoys.block.PRBlock;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.registry.IRegistryBlock;
 import powertoys.registry.RegistryHelper;
 import powertoys.tileentity.TileEntityEjectPort;
@@ -64,9 +64,9 @@ public class PRBlocks {
 				output_port = new BlockEjectPort(), extract_port = new BlockExtractPort(), crafting_box = new BlockCraftingBox(),
 				search_box = new BlockSearchBox(), sort_box = new BlockSortBox(), access_terminal = new BlockAccessTerminal(),
 				security_box = new BlockSecurityBox());
-		if (!PRConfig.enableTerminal)
+		if (!StorageConfig.enableTerminal)
 			blocks.remove(access_terminal); // terminal disabled
-		if (!PRConfig.enableSecurity)
+		if (!StorageConfig.enableSecurity)
 			blocks.remove(security_box); // security disabled
 	}
 

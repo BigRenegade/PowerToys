@@ -1,7 +1,7 @@
 package powertoys.block;
 
 import net.minecraft.block.material.Material;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 
 public class BlockCondensedStorage extends BlockStorage {
 
@@ -11,6 +11,6 @@ public class BlockCondensedStorage extends BlockStorage {
 
 	@Override
 	public int getCapacity() {
-		return PRConfig.condensedCapacity;
+		return StorageConfig.condensedCapacity;
 	}
 }

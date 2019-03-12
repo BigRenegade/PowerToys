@@ -10,7 +10,8 @@ import net.minecraftforge.fml.client.config.DummyConfigElement.DummyCategoryElem
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import net.minecraftforge.fml.client.config.GuiConfigEntries.CategoryEntry;
-import powertoys.config.PRConfig;
+import powertoys.config.RecordsConfig;
+import powertoys.config.StorageConfig;
 import powertoys.util.Reference;
 import net.minecraftforge.fml.client.config.IConfigElement;
 
@@ -63,6 +64,8 @@ public class GuiFactory implements IModGuiFactory
 			List<IConfigElement> list = new ArrayList<IConfigElement>();
 			//Add the two buttons that will go to each mbe.config category edit screen
 			list.add(new DummyCategoryElement("Main", "gui.ctgy.Main", CategoryEntryMain.class));
+			list.add(new DummyCategoryElement("Music", "gui.ctgy.Music", CategoryEntryMusic.class));
+			list.add(new DummyCategoryElement("Storage", "gui.ctgy.Storage", CategoryEntryStorage.class));
 			return list;
 		}
 
@@ -84,14 +87,14 @@ public class GuiFactory implements IModGuiFactory
 				//Additionally, Forge best practices say to put the path to the mbe.config file for the category as
 				// the title for the category mbe.config screen
 
-        Configuration configuration = PRConfig.getConfig();
-        ConfigElement cat_general = new ConfigElement(configuration.getCategory(PRConfig.CATEGORY_NAME_MAIN));
+        Configuration configuration = StorageConfig.getConfig();
+        ConfigElement cat_general = new ConfigElement(configuration.getCategory(StorageConfig.CATEGORY_NAME_MAIN));
         List<IConfigElement> propertiesOnThisScreen = cat_general.getChildElements();
-        String windowTitle = configuration.toString();
+        String windowTitle = "Main" + Reference.mainTitle;
 
         return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
                               this.owningScreen.modID,
-                              PRConfig.CATEGORY_NAME_MAIN,
+                              StorageConfig.CATEGORY_NAME_MAIN,
                               this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
                               this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart,
                               windowTitle);
@@ -100,9 +103,9 @@ public class GuiFactory implements IModGuiFactory
 			}
 		}
 
-		public static class CategoryEntryMisc extends CategoryEntry
+		public static class CategoryEntryMusic extends CategoryEntry
 		{
-			public CategoryEntryMisc(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
+			public CategoryEntryMusic(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
 			{
 				super(owningScreen, owningEntryList, prop);
 			}
@@ -110,14 +113,14 @@ public class GuiFactory implements IModGuiFactory
 			@Override
 			protected GuiScreen buildChildScreen()
 			{
-        Configuration configuration = PRConfig.getConfig();
-        ConfigElement cat_general = new ConfigElement(configuration.getCategory(PRConfig.CATEGORY_NAME_MISC));
+        Configuration configuration = StorageConfig.getConfig();
+        ConfigElement cat_general = new ConfigElement(configuration.getCategory(StorageConfig.CATEGORY_NAME_MUSIC));
         List<IConfigElement> propertiesOnThisScreen = cat_general.getChildElements();
-        String windowTitle = configuration.toString();
+        String windowTitle = "Music" + Reference.mainTitle;
 
         return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
                              this.owningScreen.modID,
-                             PRConfig.CATEGORY_NAME_MISC,
+                             StorageConfig.CATEGORY_NAME_MUSIC,
                              this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
                              this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart,
                              windowTitle);
@@ -144,14 +147,14 @@ public class GuiFactory implements IModGuiFactory
 				//Additionally, Forge best practices say to put the path to the mbe.config file for the category as
 				// the title for the category mbe.config screen
 
-        Configuration configuration = PRConfig.getConfig();
-        ConfigElement cat_general = new ConfigElement(configuration.getCategory(PRConfig.CATEGORY_NAME_MAIN));
+        Configuration configuration = StorageConfig.getConfig();
+        ConfigElement cat_general = new ConfigElement(configuration.getCategory(StorageConfig.CATEGORY_NAME_STORAGE));
         List<IConfigElement> propertiesOnThisScreen = cat_general.getChildElements();
-        String windowTitle = configuration.toString();
+        String windowTitle = "Storage" + Reference.mainTitle;
 
         return new GuiConfig(this.owningScreen, propertiesOnThisScreen,
                               this.owningScreen.modID,
-                              PRConfig.CATEGORY_NAME_STORAGE,
+                              StorageConfig.CATEGORY_NAME_STORAGE,
                               this.configElement.requiresWorldRestart() || this.owningScreen.allRequireWorldRestart,
                               this.configElement.requiresMcRestart() || this.owningScreen.allRequireMcRestart,
                               windowTitle);

@@ -29,7 +29,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 import powertoys.PowerToys;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.gui.server.ContainerStorageCore;
 import powertoys.network.MessageCustomClick;
 import powertoys.tileentity.TileEntityStorageCore;
@@ -356,7 +356,7 @@ public class GuiStorageCore extends GuiContainerPR {
 		boolean tabSearch = false;
 
 		// search modes
-		if (PRConfig.enableSearchModes) {
+		if (StorageConfig.enableSearchModes) {
 			// ore dictionary search
 			if (searchText.startsWith("$")) {
 				oreSearch = true;

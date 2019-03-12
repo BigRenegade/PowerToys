@@ -5,7 +5,7 @@ import net.minecraft.item.ItemRecord;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.item.ItemDolly;
 import powertoys.item.ItemKey;
 import powertoys.item.PRItem;
@@ -74,8 +74,8 @@ public class PRItems {
 			MINER_VEST = new MinerVest("minervest"),
 			INVISIBLE_AMULET = new InvisibleAmulet("invisibleamulet")
 		);
-		if(!PRConfig.enableSecurity) items.remove(key); // security disabled
-		if(!PRConfig.enableDolly) {
+		if(!StorageConfig.enableSecurity) items.remove(key); // security disabled
+		if(!StorageConfig.enableDolly) {
 			items.remove(dolly_basic); // dollies disabled
 			items.remove(dolly_super);
 		}

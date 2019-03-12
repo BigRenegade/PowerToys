@@ -1,8 +1,9 @@
 # language file
 
 # creative tab
-itemGroup.PRtab=PT Storage
-itemGroup.PR_tab=PT Rings
+itemGroup.PTStorageTab=PT Storage
+itemGroup.PTRingsTab=PT Rings
+itemGroup.PTRecordsTab=PT Records
 
 # blocks
 tile.powertoys:blank_box.name=Blank Box

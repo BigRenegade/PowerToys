@@ -8,17 +8,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import powertoys.init.ModItems;
 import powertoys.item.rings.CommonRing;
 
-public class PR_tab extends CreativeTabs  {
+public class PTRecordsTab extends CreativeTabs  {
 
-		public PR_tab() {
-		super("Power Toys");
+		public PTRecordsTab() {
+		super("Power Toys Records");
 		// TODO Auto-generated constructor stub
 	}
 
 		@Override
 		@SideOnly(Side.CLIENT)
 		public ItemStack getTabIconItem() {
-			return new ItemStack(CommonRing.RING);
+			return new ItemStack(Items.RECORD_13);
 		}
 
 

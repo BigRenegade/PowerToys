@@ -3,7 +3,7 @@ package powertoys.crafting;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 import powertoys.init.PRBlocks;
 import powertoys.init.PRItems;
 
@@ -23,7 +23,7 @@ public class CraftingManager {
 				"stickWood");
 
 		// old recipes enabled
-		if (PRConfig.classicRecipes) {
+		if (StorageConfig.classicRecipes) {
 
 			// storage core
 			RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.storage_core), "ABA", "BCB", "ABA", 'A', "logWood", 'B', "ingotIron", 'C',
@@ -49,7 +49,7 @@ public class CraftingManager {
 					Items.MAP);
 
 			// security box
-			if (PRConfig.enableSecurity)
+			if (StorageConfig.enableSecurity)
 				RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.security_box), "ABA", "BCB", "ABA", 'A', "blockIron", 'B', Blocks.IRON_BARS,
 						'C', PRItems.key);
 
@@ -80,7 +80,7 @@ public class CraftingManager {
 					Items.COMPARATOR, 'C', "logWood", 'D', Items.MAP);
 
 			// security box
-			if (PRConfig.enableSecurity)
+			if (StorageConfig.enableSecurity)
 				RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.security_box), "EDE", "CBC", "CEC", 'B', new ItemStack(PRBlocks.blank_box),
 						'E', "blockIron", 'C', Blocks.IRON_BARS, 'D', PRItems.key);
 
@@ -101,7 +101,7 @@ public class CraftingManager {
 				PRBlocks.super_storage_box, 'C', "gemDiamond");
 
 		// hyper storage box
-		RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.hyper_storage_box), "ABA", "ACA", PRConfig.toughHyper ? "ABA" : "AAA", 'A',
+		RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.hyper_storage_box), "ABA", "ACA", StorageConfig.toughHyper ? "ABA" : "AAA", 'A',
 				Blocks.OBSIDIAN, 'B', Items.NETHER_STAR, 'C', PRBlocks.ultra_storage_box);
 
 		// ejection port
@@ -113,16 +113,16 @@ public class CraftingManager {
 				Blocks.IRON_BARS, 'B', PRBlocks.input_port);
 
 		// terminal
-		if (PRConfig.enableTerminal)
+		if (StorageConfig.enableTerminal)
 			RecipeHelper.addShapedRecipe(new ItemStack(PRBlocks.access_terminal), "IXI", "XAX", "IXI", 'X', "paneGlass", 'I', Blocks.IRON_BARS,
 					'A', PRBlocks.storage_core);
 
 		// key
-		if (PRConfig.enableSecurity)
+		if (StorageConfig.enableSecurity)
 			RecipeHelper.addShapedRecipe(new ItemStack(PRItems.key), "XXI", "XX ", 'I', "ingotGold", 'X', "nuggetGold");
 		
 		// dollies
-		if (PRConfig.enableDolly) {
+		if (StorageConfig.enableDolly) {
 			RecipeHelper.addShapedRecipe(new ItemStack(PRItems.dolly_basic), "X X","X X","PPP", 'X',"ingotIron", 'P',Blocks.STONE_PRESSURE_PLATE);
 			RecipeHelper.addShapedRecipe(new ItemStack(PRItems.dolly_super), " X "," D "," X ", 'X',"ingotGold", 'D',PRItems.dolly_basic);
 		}

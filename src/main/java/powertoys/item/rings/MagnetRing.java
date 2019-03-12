@@ -23,6 +23,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
@@ -120,6 +121,12 @@ public class MagnetRing extends PRItem implements IBauble {
 	public void onUnequipped(ItemStack itemstack, EntityLivingBase player) {
 		player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, .75F, 2f);
 	}
+
+	@Override
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
+		return EnumRarity.RARE;
+	}
+
 
 
 }

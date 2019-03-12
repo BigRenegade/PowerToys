@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -67,6 +68,11 @@ public class FlightRing extends PRItem implements IBauble
     public void onEquipped(ItemStack itemstack, EntityLivingBase entity) {
         startFlying((EntityPlayer) entity);
     }
+
+	@Override
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
+		return EnumRarity.RARE;
+	}
 
 
     private void startFlying(EntityPlayer player) {

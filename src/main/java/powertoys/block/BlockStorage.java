@@ -1,7 +1,7 @@
 package powertoys.block;
 
 import net.minecraft.block.material.Material;
-import powertoys.config.PRConfig;
+import powertoys.config.StorageConfig;
 
 public class BlockStorage extends StorageMultiblock {
 
@@ -14,6 +14,6 @@ public class BlockStorage extends StorageMultiblock {
 	}
 
 	public int getCapacity() {
-		return PRConfig.basicCapacity;
+		return StorageConfig.basicCapacity;
 	}
 }
