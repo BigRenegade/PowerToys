@@ -44,7 +44,7 @@ import powertoys.util.Reference;
 public class GuiStorageCore extends GuiContainerPR {
 
 	TileEntityStorageCore tileEntity;
-	PRItemRenderer ezRenderer;
+	PRItemRenderer prRenderer;
 
 	// scrolling and searching
 	int scrollRow = 0;
@@ -217,10 +217,10 @@ public class GuiStorageCore extends GuiContainerPR {
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		this.zLevel = 200.0F;
 		this.itemRender.zLevel = 200.0F;
-		if (this.ezRenderer == null) {
-			this.ezRenderer = new PRItemRenderer(this.mc.getTextureManager(), this.itemRender.getItemModelMesher().getModelManager());
+		if (this.prRenderer == null) {
+			this.prRenderer = new PRItemRenderer(this.mc.getTextureManager(), this.itemRender.getItemModelMesher().getModelManager());
 		}
-		this.ezRenderer.zLevel = 200.0F;
+		this.prRenderer.zLevel = 200.0F;
 
 		boolean finished = false;
 		for (int i = 0; i < this.rowsVisible(); i++) {
@@ -244,7 +244,7 @@ public class GuiStorageCore extends GuiContainerPR {
 					font = fontRenderer;
 				RenderHelper.enableGUIStandardItemLighting();
 				this.itemRender.renderItemAndEffectIntoGUI(stack, x, y);
-				ezRenderer.renderItemOverlayIntoGUI(font, stack, x, y, "" + group.count);
+				prRenderer.renderItemOverlayIntoGUI(font, stack, x, y, "" + group.count);
 
 				x += 18;
 			}

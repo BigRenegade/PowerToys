@@ -11,7 +11,7 @@ import powertoys.item.rings.CommonRing;
 public class PR_tab extends CreativeTabs  {
 
 		public PR_tab() {
-		super("Power Rings");
+		super("Power Toys");
 		// TODO Auto-generated constructor stub
 	}
 

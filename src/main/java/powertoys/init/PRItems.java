@@ -1,6 +1,8 @@
 package powertoys.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemRecord;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import powertoys.config.PRConfig;
@@ -52,7 +54,6 @@ public class PRItems {
 	public static PRItem BASE_BELT;
 	public static PRItem MINER_VEST;
 	public static PRItem INVISIBLE_AMULET;
-	
 
 	private static void init() {
 		items.join(
@@ -72,7 +73,6 @@ public class PRItems {
 			BASE_BELT = new BaseBelt("basebelt"),
 			MINER_VEST = new MinerVest("minervest"),
 			INVISIBLE_AMULET = new InvisibleAmulet("invisibleamulet")
-			
 		);
 		if(!PRConfig.enableSecurity) items.remove(key); // security disabled
 		if(!PRConfig.enableDolly) {

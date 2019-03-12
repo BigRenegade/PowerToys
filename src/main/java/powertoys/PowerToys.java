@@ -1,7 +1,10 @@
 package powertoys;
 
+import java.io.File;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
+import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
@@ -13,6 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import powertoys.config.ModConfiguration;
 import powertoys.config.PRConfig;
 import powertoys.config.PRConfig.ConfigEventHandler;
 import powertoys.events.CoreEvents;
@@ -20,6 +24,7 @@ import powertoys.events.SecurityEvents;
 import powertoys.gui.GuiHandler;
 import powertoys.init.PRBlocks;
 import powertoys.init.PRItems;
+import powertoys.item.record.RecordSoundsBase;
 import powertoys.network.PRNetwork;
 import powertoys.proxy.CommonProxy;
 import powertoys.registry.RegistryHelper;
@@ -39,8 +44,9 @@ public class PowerToys {
 
     public static final String GUIFACTORY = Reference.GUI_FACTORY;
 	public static SimpleNetworkWrapper nw;
-	//public static Configuration config;
-
+	public static File config;
+//	public static File MusicConfig;
+	
 	public static final CreativeTabs tabPowerRings = (new CreativeTabs("PR_tab") {
 
 		@Override
@@ -57,14 +63,23 @@ public class PowerToys {
 		}
 	});	
 
-//	public PRTab creativeTab;
+	public static final CreativeTabs tabRecords = (new CreativeTabs("RecordsTab") {
+
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(Items.RECORD_13);
+		}
+	});	
+
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		proxy.preInit();
+		RecordSoundsBase.registerSounds();
+//		proxy.preInit();
 		proxy.initRegistryEvents();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		nw = PRNetwork.registerNetwork();
+		ModConfiguration.registerConfig(event);
 		MinecraftForge.EVENT_BUS.register(new CoreEvents());
 		MinecraftForge.EVENT_BUS.register(new SecurityEvents());
 		MinecraftForge.EVENT_BUS.register(new ConfigEventHandler());

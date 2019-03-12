@@ -1,0 +1,28 @@
+{
+  "perspectives": {
+    "category": "record",
+    "sounds": [
+        { "name": "powertoys:perspectives",
+          "stream": true 
+        }
+    ]
+  },
+  "kissthis": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "powertoys:kissthis",
+        "stream": true
+      }
+    ]
+  },
+  "kissass": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "powertoys:kissass",
+        "stream": true
+      }
+    ]
+  }
+}

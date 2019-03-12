@@ -13,6 +13,7 @@ import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
@@ -50,5 +51,6 @@ public class ModItems
 	public static final Item BASE_BELT = new BaseBelt("basebelt");
 	public static final Item MINER_VEST = new MinerVest("minervest");
 	public static final Item INVISIBLE_AMULET = new InvisibleAmulet("invisibleamulet");
-	
+
+
 }
