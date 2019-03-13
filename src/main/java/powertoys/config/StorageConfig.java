@@ -186,6 +186,7 @@ public class StorageConfig {
 		Property propSuperCapacityInt = config.get(CATEGORY_NAME_STORAGE, "superCapacity", SUPER_CAPACITY_DEFAULT_VALUE, "Configuration integer (superCapacity)", SUPER_CAPACITY_MIN_VALUE, SUPER_CAPACITY_MAX_VALUE);
 		propSuperCapacityInt.setComment("Configuration integer (superCapacity)   MIN: " + SUPER_CAPACITY_MIN_VALUE + "     Max: " + SUPER_CAPACITY_MAX_VALUE + "     Default:  " + SUPER_CAPACITY_DEFAULT_VALUE);
 		propSuperCapacityInt.setLanguageKey("superCapacity");
+		
 
 		final int ULTRA_CAPACITY_MIN_VALUE = 100;
 		final int ULTRA_CAPACITY_MAX_VALUE = 400000;
@@ -273,7 +274,12 @@ public class StorageConfig {
 		
 		final String RECORD001 = "Your song name";
 		Property propRecord001String = config.get(CATEGORY_NAME_MUSIC, "Record001", RECORD001);
-		propRecord001String.setComment("Record001 RecordsConfig (basicCapacity)   MIN:      Max:      Default:  ");
+		propRecord001String.setComment("You must set up your songs in the following manner:  \n"
+				+ "1)  Place your song in the powertoys/sounds folder.\n"
+				+ "2)  All songs should be in lower case with NO special\n"
+				+ "    characters. You can use _ to separate words\n"
+				+ "3)  After each record name place the name of your song, like so:\n"
+				+ "    Record001 = kissthis    or    Record001 = kiss_this\n");
 		propRecord001String.setLanguageKey("Record001");
 
 

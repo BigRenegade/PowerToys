@@ -35,5 +35,6 @@ public class Reference {
 	public static final String REGENERATIONRING = MODID + ":regenring";
 
 	public static final String BASEBELT = MODID + ":basebelt";
-    
+ 
+	
 }

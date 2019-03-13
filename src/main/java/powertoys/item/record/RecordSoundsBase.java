@@ -14,14 +14,14 @@ import powertoys.util.Reference;
 @ObjectHolder(Reference.MODID)
 public class RecordSoundsBase {
 	
-	public static SoundEvent perspectives;
-	public static SoundEvent kissthis;
-	public static SoundEvent kissass;
+	public static SoundEvent perspectives = registerSound("perspectives");
+	public static SoundEvent kissthis = registerSound("kissthis");
+	public static SoundEvent kissass = registerSound("kissass");
 	
 	public static void registerSounds() {
-		perspectives = registerSound("perspectives");
-		kissthis = registerSound("kissthis");
-		kissass = registerSound("kissass");
+//		perspectives = registerSound("perspectives");
+//		kissthis = registerSound("kissthis");
+//		kissass = registerSound("kissass");
 	}
 	
 	private static SoundEvent registerSound(String soundName) {

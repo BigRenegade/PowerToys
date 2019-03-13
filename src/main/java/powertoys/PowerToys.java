@@ -74,7 +74,7 @@ public class PowerToys {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		RecordSoundsBase.registerSounds();
+//		RecordSoundsBase.registerSounds();
 		RecordsConfig.registerConfig(event);
 		proxy.preInit();
 		proxy.initRegistryEvents();
