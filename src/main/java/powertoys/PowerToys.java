@@ -46,6 +46,8 @@ public class PowerToys {
 	public static SimpleNetworkWrapper nw;
 	public static File config;
 	public static File MusicConfig;
+	public static String resourceLocale = "";
+	public static Boolean writeJSON;
 	
 	public static final CreativeTabs tabPowerRings = (new CreativeTabs("PTRingsTab") {
 
@@ -74,7 +76,6 @@ public class PowerToys {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-//		RecordSoundsBase.registerSounds();
 		RecordsConfig.registerConfig(event);
 		proxy.preInit();
 		proxy.initRegistryEvents();

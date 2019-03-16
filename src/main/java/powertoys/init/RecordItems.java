@@ -13,6 +13,7 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,7 +34,20 @@ public class RecordItems {
 	public static final Item KISSTHIS_RECORD = new RecordBase("kissthis", RecordSoundsBase.kissthis);
 	public static final Item PERSPECTIVES_RECORD = new RecordBase("perspectives", RecordSoundsBase.perspectives);
 	public static final Item KISSASS_RECORD = new RecordBase("kissass", RecordSoundsBase.kissass);
+	public static final Item D5150_RECORD = new RecordBase("dierksbentley5150", RecordSoundsBase.DierksBentley5150);
+	
+	
+	public static void makeRecordList () {
+
+//		for(final Item item : RECORDS) {
+//			event.getRegistry().register(item);
+//			item.addInformation(item.getUnlocalizedName(), worldIn, item.getUnlocalizedName(), true);
+//			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+//			ITEMS.add(item);
+//		}
 		
+	}
+	
 	
 	@Mod.EventBusSubscriber(modid = Reference.MODID)
 	public static class ItemRegistration {
@@ -45,11 +59,15 @@ public class RecordItems {
 			final Item[] items = {
 					KISSTHIS_RECORD,
 					PERSPECTIVES_RECORD,
-					KISSASS_RECORD
+					KISSASS_RECORD,
+					D5150_RECORD
 			};
-			
+
+//			 World worldIn;
+			 
 			for(final Item item : items) {
 				event.getRegistry().register(item);
+//				item.addInformation(item.getUnlocalizedName(), worldIn, item.getUnlocalizedName(), true);
 				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 				ITEMS.add(item);
 			}

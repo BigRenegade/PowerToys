@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
@@ -35,6 +36,7 @@ public class StorageConfig {
 	public static final String CATEGORY_NAME_MAIN = "Main";
 	public static final String CATEGORY_NAME_MUSIC = "Music";
 	public static final String CATEGORY_NAME_STORAGE = "Storage";
+	private static final String writeJSON = null;
 
 	public static String Record001;
 	public static String Record002;
@@ -62,6 +64,8 @@ public class StorageConfig {
 	public static String Record024;
 	public static String Record025;
 	
+	
+	
 	public static void preInit()
 	{
 		/*
@@ -74,6 +78,14 @@ public class StorageConfig {
 		 */
 		File configFile = new File(Loader.instance().getConfigDir() + "/" + Reference.MODID, "Storage.cfg");
 
+		String tmp;
+		
+		tmp = Loader.instance().getConfigDir().toString() + "\\" + Reference.MODID + "\\sounds\\";
+		PowerToys.resourceLocale = tmp;
+		tmp = tmp.substring(0, 3);
+		
+		//PowerToys.resourceLocale = tmp + PowerToys.resourceLocale.substring(34, PowerToys.resourceLocale.length());
+		
 		// initialize your configuration object with your configuration file values.
 		config = new Configuration(configFile);
 
@@ -245,12 +257,13 @@ public class StorageConfig {
 		// By defining a property order we can control the order of the
 		// properties in the config file and GUI. This is defined on a per config-category basis.
 
-		final String RECORD101 = "Your song name";
-		Property propRecord101String = config.get(CATEGORY_NAME_MAIN, "Record001", RECORD101);
-		propRecord101String.setLanguageKey("Record101");
+		final boolean WRITE_JSON_DEFAULT_VALUE = false;
+		Property propEnableWriteJSONBool = config.get(CATEGORY_NAME_MAIN, "writeJSON", WRITE_JSON_DEFAULT_VALUE);
+		propEnableWriteJSONBool.setComment("Allow mod to write the sounds.json file for you? (true/false)   deault = false");
+		propEnableWriteJSONBool.setLanguageKey("PowerToys.writeJSON");
 
 		List<String> propOrderMain = new ArrayList<String>();
-		propOrderMain.add(propRecord101String.getName());
+		propOrderMain.add(propEnableWriteJSONBool.getName());
 		config.setCategoryPropertyOrder(CATEGORY_NAME_MAIN, propOrderMain);
 
 		
@@ -275,7 +288,8 @@ public class StorageConfig {
 		final String RECORD001 = "Your song name";
 		Property propRecord001String = config.get(CATEGORY_NAME_MUSIC, "Record001", RECORD001);
 		propRecord001String.setComment("You must set up your songs in the following manner:  \n"
-				+ "1)  Place your song in the powertoys/sounds folder.\n"
+				+ "1)  Place your song in the powertoys/sounds folder.  " + PowerToys.resourceLocale + "\n"
+				
 				+ "2)  All songs should be in lower case with NO special\n"
 				+ "    characters. You can use _ to separate words\n"
 				+ "3)  After each record name place the name of your song, like so:\n"
@@ -490,6 +504,7 @@ public class StorageConfig {
 			Record024 = propRecord024String.getString(); // can also use a literal (see integer example) if desired
 			Record025 = propRecord025String.getString(); // can also use a literal (see integer example) if desired
 
+			PowerToys.writeJSON = propEnableWriteJSONBool.getBoolean(WRITE_JSON_DEFAULT_VALUE); // can also use a literal (see integer example) if desired
 		}
 
 		/*
@@ -525,7 +540,7 @@ public class StorageConfig {
 		propRecord023String.set(Record023);
 		propRecord024String.set(Record024);
 		propRecord025String.set(Record025);
-
+		propEnableWriteJSONBool.set(PowerToys.writeJSON);
 
 		propBasicCapacityInt.set(basicCapacity);
 		propCondensedCapacityInt.set(condensedCapacity);

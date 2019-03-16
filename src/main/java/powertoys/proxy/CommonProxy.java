@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import powertoys.config.RecordsConfig;
 import powertoys.config.StorageConfig;
+import powertoys.item.record.RecordSoundsBase;
 import powertoys.registry.RegistryHelper;
 import powertoys.util.Reference;
 
@@ -18,6 +19,7 @@ public class CommonProxy {
 	  {
 		   //read mbe.config first
 		   StorageConfig.preInit();
+		   //RecordSoundsBase.registerSounds();
 		   //RecordsConfig.preInit();
 	  }
 

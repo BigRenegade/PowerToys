@@ -24,5 +24,15 @@
         "stream": true
       }
     ]
+  },
+  "dierksbentley5150": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "powertoys:dierksbentley5150",
+        "stream": true
+      }
+    ]
   }
+	
 }

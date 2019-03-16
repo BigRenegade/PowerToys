@@ -19,7 +19,7 @@ public class RecordBase extends ItemRecord {
 		this.setRegistryName(Reference.MODID + ":" + name);
 		this.setCreativeTab(PowerToys.tabRecords);
 		
-//		RecordItems.ITEMS.add(this);
+//		RecordItems.RECORDS.add(this);
 	}
 
 }
